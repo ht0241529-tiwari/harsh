@@ -2,8 +2,9 @@ import java.util.Arrays;
 
 public class OrderAgnosticBinarySearch {
     public static void main(String[] args) {
-   int [] arr={1,2,3,4,5,6};
-   int target=5;
+ //  int [] arr={1,2,3,4,5,6};//asc array
+  int [] arr={9,7,6,5,4,2,1};//dsc array
+   int target=9;
         int ans=oabs(arr, target);
         System.out.println(ans);        
     }
