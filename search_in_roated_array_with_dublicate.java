@@ -1,7 +1,7 @@
 public class search_in_roated_array_with_dublicate {
     public static void main(String[] args) {
-        int []arr={4,5,6,7,0,1,2,3};
-                int target=1;
+        int []arr={2,2,6,7,0,1,2,2};
+                int target=0;
               //  int ans =findpivot(arr);
 
                 int ans=search(arr, target);
@@ -9,14 +9,14 @@ public class search_in_roated_array_with_dublicate {
 
                     }
     static int search(int []arr,int target){
-        int pivot=findpivot(arr);
+        int pivot=findpivotindublicate(arr);
         int leftsearch=binary_search(arr, target, 0, pivot);
         if(leftsearch!=-1){
             return leftsearch;
         }
         return binary_search(arr, target, pivot+1, arr.length-1);
     }
-    static int findpivot(int []arr){
+    static int findpivotindublicate(int []arr){
     int start=0;
     int end=arr.length-1;
     
@@ -43,6 +43,13 @@ public class search_in_roated_array_with_dublicate {
         return end-1;
     }
     end--;
+  }
+  //left side is sorted,so pivot shhould be in right
+  else if(arr[start]<arr[mid] || (arr[start]==arr[mid] && arr[mid]>arr[end])){
+     start=mid+1;
+  }
+  else{
+    end=mid-1;
   }
     }
     return -1;
