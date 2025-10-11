@@ -37,3 +37,5 @@ public class Find_All_Numbers_Disappeared_in_A_Array {
         num[second] = temp;
     }
 }
+//Time Complexity: O(n)
+//Space Complexity: O(1)
