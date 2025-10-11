@@ -7,8 +7,7 @@ public class search_in_rotated_sorted_array {
 
                 int ans=search(arr, target);
                 System.out.println(ans);
-
-                    }
+    }
     static int search(int []arr,int target){
         int pivot=findpivot(arr);
         int leftsearch=binary_search(arr, target, 0, pivot);
