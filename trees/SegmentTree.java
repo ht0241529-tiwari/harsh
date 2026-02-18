@@ -3,7 +3,12 @@ public class SegmentTree {
     public static void main(String[] args) {
         int[] arr = {3, 8, 6, 7, -2, -8, 4, 9};
         SegmentTree st = new SegmentTree(arr);
-        st.display();   // fixed variable name
+        // st.display();   // fixed variable name
+        
+        System.out.println("Sum of range [1,3] = " + st.query(1, 3));
+        st.update(2, 10);
+        System.out.println("After updating index 2 to 10:");
+        st.display();
     }
 
     private static class Node {
